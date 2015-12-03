@@ -1,0 +1,41 @@
+{{!< ../layouts/default}}
+
+<div class="top-heading" data-page="article">
+    <div class="wrap"><h1>技术博文</h1></div>
+</div>
+
+<div class="blog-content">
+    <div class="wrap">
+        <div class="blog-grids">
+            <div class="blog-left">
+                {{#each articles}}
+                <div>
+                    <div class="icon1">
+                        <a href="/articles/art_{{article_id}}"><span></span></a>
+                    </div>
+                    <div class="clear"></div>
+                    <div class="sinfo article-content">
+                        <div class="sinfo-right article-body">
+                            <h1><a href="/articles/art_{{article_id}}">{{article_title}}</a></h1>
+                            {{{article_notes}}}
+                        </div>
+                        <div class="clear"></div>
+                    </div>
+                </div>
+                <h6></h6>
+                {{/each}}
+            </div>
+            <div class="blog-right">
+                <div class="side-bar">
+                    {{> nav_about}}
+                    {{> nav_category}}
+                    {{> nav_photo}}
+                </div>
+            </div>
+            <div class="clear"></div>
+        </div>
+        {{> page}}
+    </div>
+</div>
+
+<script type="text/javascript">require(['page/article']);</script>

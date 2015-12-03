@@ -1,0 +1,18 @@
+.article-content { margin: 0 auto; width: 98%; color: #353535; font-size: 1em; line-height: 1.9em; }
+.article-content hr { border: 1px solid #f2b19c; }
+.article-content .article-title { font-size: 1.5em; text-align: center; margin: 1em 0; color: #e8663c; word-spacing: 7px; }
+.article-content h2.article-title { font-size: 1em; margin: 1em 0; color: #e8663c; word-spacing: 7px; text-align: left; text-indent: 1.7em; }
+.article-content .article-body { }
+.article-content .article-body h1 { color: #E8663C; font-size: 1.5em; word-spacing: 7px; }
+.article-content .article-body h1 a { color: #E8663C; }
+.article-content .article-body h2 { color: #E8663C; font-size: 1.2em; word-spacing: 7px; }
+.article-content .article-body p { margin: 1em 0; text-indent: 2em; padding: 0; }
+.article-content .article-body .code { border: #cccccc 1px solid; padding: 1em; background-color: #f5f5f5; margin: 1em 0; }
+.article-content .article-body .code p { margin: 0; padding: 0 1em; text-indent: 0; }
+.article-content .article-body .code .notes { color: #008000; }
+.article-content .article-body .code .keyword { color: #0000ff; }
+.article-content .article-body .dictionary { background-color: #f5f5f5; border: 1px solid #cccccc; width: 100%; margin: 1em 0; color: #525252; font-family: "open_sansregular"; font-size: 0.85em; font-weight: 100; }
+.article-content .article-body .dictionary tr { border: 1px solid #cccccc; margin: 2em 0; }
+.article-content .article-body .dictionary td:nth-child(1) { width: 20%; }
+.article-content .article-body .dictionary td { padding: 0.2em 0.2em 0.2em 2em; }
+.article-content .article-body .sep-line { background: url('/assert/d/seperate-line.jpg') no-repeat; height: 1.9em; margin: 0 auto; width: 200px; }

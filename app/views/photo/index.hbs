@@ -1,0 +1,36 @@
+{{!< ../layouts/default}}
+
+<div class="top-heading" data-page="photo">
+    <div class="wrap"><h1>图片课件</h1></div>
+</div> 
+
+<div class="wrap">
+    <div class="main">
+        <div class="gallery1">
+            <div class="container">
+                <ul id="filters" class="clearfix">
+                    <li><span class="filter active">所有课件</span></li>
+                </ul>
+                <div id="portfoliolist">
+                    {{#each albums}}
+                    <div class="portfolio">
+                        <div class="portfolio-wrapper">             
+                            <a href="/photo/alb_{{album_name}}">
+                                <img src="/photo/alb_{{album_name}}/ph_{{album_cover}}" alt="{{album_title}}" />
+                                <span><img src="/assert/d/search.png" alt="查看" /></span>
+                                <div class="desc">
+                                    <h2>{{album_title}}</h2>
+                                    <h3>{{album_date}}</h3>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                    {{/each}}
+                </div>
+            </div>
+        </div>
+        <div class="clear"></div>
+    </div>
+</div>
+
+<script type="text/javascript">require(['page/photo']);</script>

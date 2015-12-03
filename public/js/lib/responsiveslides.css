@@ -1,0 +1,79 @@
+.rslides {
+    position: relative;
+    list-style: none;
+    overflow: hidden;
+    width: 100%;
+    padding: 0;
+    margin: 0;
+}
+
+.rslides li {
+    -webkit-backface-visibility: hidden;
+    position: absolute;
+    display: none;
+    width: 100%;
+    left: 0;
+    top: 0;
+}
+
+.rslides li:first-child {
+    position: relative;
+    display: block;
+    float: left;
+}
+
+.rslides img {
+    display: block;
+    height: auto;
+    float: left;
+    width: 100%;
+    border: 0;
+}
+
+.rslides {
+    margin: 0 auto;
+}
+.transparent-btns_nav {
+    background: none repeat scroll 0 0 #FFFFFF;
+    display: block;
+    height: 91%;
+    left: 0;
+    overflow: hidden;
+    position: absolute;
+    text-indent: -9999px;
+    top: 0;
+    width: 48%;
+    z-index: 3;
+    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)"; /*IE8*/
+    filter: alpha(opacity=0);  /*IE5¡¢IE5.5¡¢IE6¡¢IE7*/
+    opacity: 0;  /*Opera9.0+¡¢Firefox1.5+¡¢Safari¡¢Chrome*/
+}
+.transparent-btns_nav.next {
+    left: auto;
+    right: 0;
+}
+.transparent-btns_nav:focus {
+    outline: medium none;
+}
+.transparent-btns_tabs {
+    margin-top: 10px;
+    text-align: center;
+}
+.transparent-btns_tabs li {
+    display: inline;
+    float: none;
+    margin-right: 5px;
+}
+.transparent-btns_tabs a {
+    background: none repeat scroll 0 0 rgba(0, 0, 0, 0.2);
+    border-radius: 15px;
+    box-shadow: 0 0 2px 0 rgba(0, 0, 0, 0.3) inset;
+    display: inline-block;
+    height: 9px;
+    overflow: hidden;
+    text-indent: -9999px;
+    width: 9px;
+}
+.transparent-btns_here a {
+    background: none repeat scroll 0 0 rgba(0, 0, 0, 0.8);
+}
