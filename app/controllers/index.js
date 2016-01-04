@@ -8,6 +8,7 @@ var router_about = express.Router();
 var router_contact = express.Router();
 var router_comment = express.Router();
 var router_mottos = express.Router();
+var router_ext = express.Router();
 
 // controllers
 var index_controller = require('./index_controller');
@@ -16,6 +17,7 @@ var photo_controller = require('./photo_controller');
 var about_controller = require('./about_controller');
 var contact_controller = require('./contact_controller');
 var comment_controller = require('./comment_controller');
+var ext_controller = require('./ext_controller');
 
 /*首页*/
 //render
@@ -46,6 +48,10 @@ router_contact.get('/', contact_controller.render_index);
 router_comment.get('/ct_:id', comment_controller.show_comments);
 router_comment.post('/submit.:format?', comment_controller.submit_comment);
 
+/*其他*/
+//render
+router_ext.get('/list', ext_controller.render_list);
+
 // exports
 exports.root = router_root;
 exports.articles = router_articles;
@@ -54,3 +60,4 @@ exports.about = router_about;
 exports.contact = router_contact;
 exports.comment = router_comment;
 exports.mottos = router_mottos;
+exports.ext = router_ext;

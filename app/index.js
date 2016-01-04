@@ -76,5 +76,6 @@ app.use('/about', controllers.about);
 app.use('/contact', controllers.contact);
 app.use('/comment', controllers.comment);
 app.use('/mottos', controllers.mottos);
+app.use('/ext', controllers.ext);
 
 module.exports = app;
