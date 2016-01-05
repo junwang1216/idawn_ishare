@@ -51,6 +51,7 @@ router_comment.post('/submit.:format?', comment_controller.submit_comment);
 /*其他*/
 //render
 router_ext.get('/list', ext_controller.render_list);
+router_ext.get('/questions', ext_controller.render_questions);
 
 // exports
 exports.root = router_root;

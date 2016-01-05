@@ -1,0 +1,128 @@
+{{!< ../layouts/ext_default}}
+
+<style type="text/css">
+    .question .title {
+        padding: 10px 0; 
+    }
+    .question .options {}
+    .question .options li {
+        margin: 0 0 10px 10px;
+        color: #525252;
+        font-size: 0.85em;
+        font-weight: 100;
+    }
+    .question .options li label {
+        display: inline-block;
+        width: 100%;
+        height: 20px;
+    }
+    .question .options li input {
+        margin-right: 10px
+    }
+    .question .answer {
+        display: none;
+    }
+    .question .answer.ok {
+        display: block;
+        color: #0f0;
+    }
+    .question .answer.error {
+        display: block;
+        color: #f00;
+    }
+</style>
+
+<div class="top-heading" data-page="others">
+    <div class="wrap"><h1>PMP 每日一题</h1></div>
+</div>
+
+<div class="wrap">
+    <div class="content">
+        <div id="questions" class="main-grid">
+            <pmp-question
+                v-for="question in questions"
+                :question="question"
+                :index="$index">
+            </pmp-question>
+        </div>
+    </div>  
+</div>
+<script type="text/javascript" src="http://cdn.jsdelivr.net/vue/1.0.13/vue.min.js"></script>
+<script type="text/javascript">
+    // 定义
+    var PMPQuestion = Vue.extend({
+        template: '<div class="question">' +
+            '<p class="title"><i><% index + 1 %>. </i><% question.title %></p>' +
+            '<ul class="options">' +
+            '<li v-for="option in question.options">' +
+            '<label><input type="radio" name="<% name %>" value="<% option.value %>" v-on:click="selectItem($event)"><% option.text %></label>' +
+            '</li>' +
+            '</ul>' +
+            '<p class="answer" v-bind:class="{\'ok\': isOK, \'error\': isError }"><% question.note %></p>' +
+            '</div>',
+        props: ['question', 'index'],
+        data: function () {
+            return {
+                isOK: false,
+                isError: false
+            };
+        },
+        methods: {
+            selectItem: function (event) {
+                this.isOK = (this.question.answer == event.target.value);
+                this.isError = (this.question.answer != event.target.value);
+
+                console.log(this.isOK);
+                console.log(this.isError);
+            }
+        },
+        computed: {
+            name: function () {
+                return "question_" + this.question.id;
+            }
+        }
+    });
+
+    // 注册
+    Vue.component('pmp-question', PMPQuestion)
+
+    Vue.config.delimiters = ['<%', '%>']
+    // 创建根实例
+    new Vue({
+        el: '#questions',
+        data: {
+            questions: [{
+                id: "1",
+                title: "aaaaaaaaaaaaaaaaa",
+                options: [{
+                    "text": "aaaa",
+                    "value": "aaaa",
+                    "qid": "1"
+                }, {
+                    "text": "bbbb",
+                    "value": "bbbb",
+                    "qid": "1"
+                }],
+                answer: "aaaa",
+                note: "asfafaasfaf"
+            }, {
+                id: "2",
+                title: "bbbbbbbbbbbbbbbbb",
+                options: [{
+                    "text": "aaaa",
+                    "value": "aaaa",
+                    "qid": "2"
+                }, {
+                    "text": "bbbb",
+                    "value": "bbbb",
+                    "qid": "2"
+                }],
+                answer: "bbbb",
+                note: "fgdhdhdhdhd"
+            }]
+        }
+    })
+</script>
+
+
+
