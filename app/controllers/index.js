@@ -22,6 +22,7 @@ var ext_controller = require('./ext_controller');
 /*首页*/
 //render
 router_root.get('/', index_controller.render_index);
+router_root.get('/img/:uuid/:name', index_controller.show_image);
 router_mottos.get('/mt_:name', index_controller.show_motto);
 
 /*博客*/

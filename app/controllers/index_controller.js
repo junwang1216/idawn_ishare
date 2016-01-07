@@ -60,3 +60,9 @@ exports.show_motto = function (req, res, next) {
 
     res.sendfile(path.join(__dirname, "../database", "mottos", conds.name));
 };
+
+exports.show_image = function (req, res, next) {
+    var conds = helpers.getRequestParams(req);
+
+    res.sendfile(path.join(__dirname, "../database", "collections", conds.uuid, conds.name));
+};

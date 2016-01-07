@@ -19,7 +19,7 @@ repository.prototype.getArticlesTypes = function (conditions, callback) {
 };
 
 repository.prototype.getArticles = function (conditions, callback) {
-    var sql = "select uuid, title, content, notes from articles where 1=1";
+    var sql = "select uuid, title, content, notes, create_date from articles where 1=1 order by id desc";
     var connection = simplePool.newConnect();
 
     connection.query(sql, function (err, rows) {
@@ -34,7 +34,7 @@ repository.prototype.getArticles = function (conditions, callback) {
 };
 
 repository.prototype.getArticle = function (conditions, callback) {
-    var sql = "select uuid, title, content, notes from articles where uuid=?";
+    var sql = "select uuid, title, content, notes, create_date from articles where uuid=?";
     var params = [conditions.id];
     var connection = simplePool.newConnect();
 
