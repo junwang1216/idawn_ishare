@@ -9,7 +9,7 @@
         margin: 0 0 10px 10px;
         color: #525252;
         font-size: 0.85em;
-        font-weight: 100;
+        font-weight: 400;
     }
     .question .options li label {
         display: inline-block;
@@ -24,11 +24,11 @@
     }
     .question .answer.ok {
         display: block;
-        color: #0f0;
+        color: #089e36;
     }
     .question .answer.error {
         display: block;
-        color: #f00;
+        color: #aa0518;
     }
 </style>
 
@@ -38,7 +38,7 @@
 
 <div class="wrap">
     <div class="content">
-        <div id="questions" class="main-grid">
+        <div id="questions" class="main-grid" data-questions="{{questions}}">
             <pmp-question
                 v-for="question in questions"
                 :question="question"
@@ -47,7 +47,7 @@
         </div>
     </div>  
 </div>
-<script type="text/javascript" src="http://cdn.jsdelivr.net/vue/1.0.13/vue.min.js"></script>
+<script type="text/javascript" src="/js/lib/vue.min.js"></script>
 <script type="text/javascript">
     // 定义
     var PMPQuestion = Vue.extend({
@@ -58,7 +58,7 @@
             '<label><input type="radio" name="<% name %>" value="<% option.value %>" v-on:click="selectItem($event)"><% option.text %></label>' +
             '</li>' +
             '</ul>' +
-            '<p class="answer" v-bind:class="{\'ok\': isOK, \'error\': isError }"><% question.note %></p>' +
+            '<p class="answer" v-bind:class="{\'ok\': isOK, \'error\': isError }">答案：<% question.answer %>；<% question.note %></p>' +
             '</div>',
         props: ['question', 'index'],
         data: function () {
@@ -71,14 +71,11 @@
             selectItem: function (event) {
                 this.isOK = (this.question.answer == event.target.value);
                 this.isError = (this.question.answer != event.target.value);
-
-                console.log(this.isOK);
-                console.log(this.isError);
             }
         },
         computed: {
             name: function () {
-                return "question_" + this.question.id;
+                return "question_" + (this.index + 1);
             }
         }
     });
@@ -91,35 +88,7 @@
     new Vue({
         el: '#questions',
         data: {
-            questions: [{
-                id: "1",
-                title: "aaaaaaaaaaaaaaaaa",
-                options: [{
-                    "text": "aaaa",
-                    "value": "aaaa",
-                    "qid": "1"
-                }, {
-                    "text": "bbbb",
-                    "value": "bbbb",
-                    "qid": "1"
-                }],
-                answer: "aaaa",
-                note: "asfafaasfaf"
-            }, {
-                id: "2",
-                title: "bbbbbbbbbbbbbbbbb",
-                options: [{
-                    "text": "aaaa",
-                    "value": "aaaa",
-                    "qid": "2"
-                }, {
-                    "text": "bbbb",
-                    "value": "bbbb",
-                    "qid": "2"
-                }],
-                answer: "bbbb",
-                note: "fgdhdhdhdhd"
-            }]
+            questions: eval('(' + document.getElementById("questions").getAttribute("data-questions") + ')')
         }
     })
 </script>
