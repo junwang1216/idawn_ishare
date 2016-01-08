@@ -45,6 +45,6 @@ require.config({
         'jquery.fliplightbox': '/js/pub/fliplightbox.min'
     },
     waitSeconds: 30,
-    urlArgs: '_=1.0.0',
+    urlArgs: '_=1.0.1',
     help: 'config'
 })

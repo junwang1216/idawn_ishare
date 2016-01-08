@@ -34,6 +34,7 @@ app.locals = {
     keywords        : config.application.keywords,
     description     : config.application.description,
     author          : config.application.author,
+    email           : config.application.email,
     page_name       : 'home',
     hide_navbar     : false,
     messages        : [],

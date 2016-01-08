@@ -21,8 +21,8 @@ module.exports = {
         subtitle    : "SHARE",
         host        : '', // http://127.0.0.1/
         port        : 18080, //服务启动端口
-        email       : "junwang1216@gmail.com",
-        author      : "witun",
+        email       : "evol1216@gmail.com",
+        author      : "idawn",
         keywords    : "html,html5,css,css3,js,requirejs,jquery,seajs,zepto,node",
         description : "在这里有前端技术的学习积累，有互联网的行业前景分析，有个人的生活感悟。"
     },
