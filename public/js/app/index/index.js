@@ -14,7 +14,7 @@ define([
             content.loadCamera();
             content.loadFilterList();
             content.loadMagnificPopup();
-            $('body').flipLightBox();
+            //$('body').flipLightBox();
         },
         loadCamera: function () {
             $('#camera_wrap_2').camera({

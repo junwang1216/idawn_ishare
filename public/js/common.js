@@ -10,6 +10,19 @@ define([
     var cur = $('div[data-page]').attr('data-page');
     $('.menu ul.nav li[data-role=' + cur + ']').addClass('active').siblings().removeClass('active');
 
+    // 菜单隐藏显示切换
+    $(".toggle-menu").on("click", function (e) {
+        e.preventDefault();
+
+        var $nav = $(this).nextAll(".nav");
+
+        if ($nav.is(":visible")) {
+            $nav.hide();
+        } else {
+            $nav.show();
+        }
+    });
+
     // 分享模块
     window._bd_share_config = {
         "common": {
