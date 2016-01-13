@@ -61,15 +61,15 @@ body { background: #FFF; font-family: 'open_sansregular'}
 
 /*********start-logo **********/
 .logo { float: left; margin: 15px 10px; }
-.logo a h1 { font-size: 2.5em; margin-bottom: 0px; text-align: center; font-family: 'bebasregular'; }
-.logo a h1 { color: #e8603c; }
+.logo a h1 { font-size: 2.5em; margin-bottom: 0px; text-align: left; font-family: 'bebasregular'; color: #e8603c;}
 .logo a h1 span { color: #f3af9d; }
+.logo p.description {font-size: 0.85em; color: #B9B9B9;}
 .color { background: #f2b19c; width: 100%; height: 50px; position: absolute; }
 
 /********end-logo*********/
 
 /**start-nav**/
-.menu { float: right; z-index: 1; margin-top: 5px; }
+.menu { float: right; z-index: 1; margin-top: 16px; }
 .menu ul { margin-left: 6px; }
 .menu li { float: left; }
 .menu li a { color: #FFF; font-size: 1em; padding: 25px 20px; display: block; text-align: center; color: #B9B9B9; -webkit-transition: all 0.5s ease-in-out; -moz-transition: all 0.5s ease-in-out; -o-transition: all 0.5s ease-in-out; transition: all 0.5s ease-in-out; position: relative; }

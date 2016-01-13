@@ -12,9 +12,11 @@
 .article-content .article-body p.date-note { margin: 0; padding: 0; text-indent: 0; color: #CCCCCC; font-size: 0.8em; }
 .article-content .article-body .code { border: #cccccc 1px solid; padding: 1em; background-color: #f5f5f5; margin: 1em 0; }
 .article-content .article-body .code p { margin: 0; padding: 0 1em; text-indent: 0; }
+.article-content .article-body .code p.margin-top-1 { margin-top: 1em;}
 .article-content .article-body .code p.text-indent-4 { padding-left: 2em; }
 .article-content .article-body .code p.text-indent-8 { padding-left: 4em; }
 .article-content .article-body .code p.text-indent-12 { padding-left: 6em; }
+.article-content .article-body .code p.text-indent-16 { padding-left: 8em; }
 .article-content .article-body .code .notes { color: #008000; }
 .article-content .article-body .code .keyword { color: #0000ff; }
 .article-content .article-body .dictionary { background-color: #f5f5f5; border: 1px solid #cccccc; width: 100%; margin: 1em 0; color: #525252; font-family: "open_sansregular"; font-size: 0.85em; font-weight: 100; }
