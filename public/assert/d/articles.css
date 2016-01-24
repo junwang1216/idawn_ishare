@@ -19,8 +19,9 @@
 .article-content .article-body .code p.text-indent-16 { padding-left: 8em; }
 .article-content .article-body .code .notes { color: #008000; }
 .article-content .article-body .code .keyword { color: #0000ff; }
-.article-content .article-body .dictionary { background-color: #f5f5f5; border: 1px solid #cccccc; width: 100%; margin: 1em 0; color: #525252; font-family: "open_sansregular"; font-size: 0.85em; font-weight: 100; }
+.article-content .article-body .dictionary { background-color: #f5f5f5; border: 1px solid #cccccc; width: 100%; margin: 1em 0; color: #525252; font-size: 0.85em; font-weight: 400; }
 .article-content .article-body .dictionary tr { border: 1px solid #cccccc; margin: 2em 0; }
 .article-content .article-body .dictionary td:nth-child(1) { width: 20%; }
-.article-content .article-body .dictionary td { padding: 0.2em 0.2em 0.2em 2em; }
+.article-content .article-body .dictionary td { padding: 0.2em 0.2em 0.2em 2em; min-width: 2em;}
+.article-content .article-body td ul { margin: 0 3em; text-indent: 2em; padding: 0; list-style: none; }
 .article-content .article-body .sep-line { background: url('/assert/d/seperate-line.jpg') no-repeat; height: 1.9em; margin: 0 auto; width: 200px; }
