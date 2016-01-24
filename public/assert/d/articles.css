@@ -19,6 +19,7 @@
 .article-content .article-body .code p.text-indent-16 { padding-left: 8em; }
 .article-content .article-body .code .notes { color: #008000; }
 .article-content .article-body .code .keyword { color: #0000ff; }
+.article-content .article-body .define { background-color: #fbcbc1; }
 .article-content .article-body .dictionary { background-color: #f5f5f5; border: 1px solid #cccccc; width: 100%; margin: 1em 0; color: #525252; font-size: 0.85em; font-weight: 400; }
 .article-content .article-body .dictionary tr { border: 1px solid #cccccc; margin: 2em 0; }
 .article-content .article-body .dictionary td:nth-child(1) { width: 20%; }
