@@ -32,7 +32,7 @@ Articles.getArticles = function (conditions, callback) {
             article.article_title = article.title;
             article.article_content = article.content;
             article.article_notes = article.notes;
-            article.article_date = (new Date(article.create_date)).format('yyyy-MM-dd hh:mm:ss');
+            article.article_date = (new Date(article.create_date)).format('yyyy-MM-dd');
         });
         return callback(null, data);
     });

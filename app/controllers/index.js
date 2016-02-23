@@ -54,6 +54,8 @@ router_comment.post('/submit.:format?', comment_controller.submit_comment);
 router_ext.get('/twitter', ext_controller.render_twitter);
 router_ext.get('/list', ext_controller.render_list);
 router_ext.get('/questions', ext_controller.render_questions);
+//api
+router_ext.get('/api/news.json', ext_controller.show_news);
 
 // exports
 exports.root = router_root;
